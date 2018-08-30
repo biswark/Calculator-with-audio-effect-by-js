@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title></title>
+<!--<link rel="stylesheet" type="text/css" href="style.css">
+<link rel="stylesheet" type="text/css" href="http://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css">
+-->
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<body id="k">
+<audio id="myAudio">
+  <source src="button-16.mp3" type="audio/mpeg">
+</audio>
+<audio id="myAudio2">
+  <source src="button-4.mp3" type="audio/mpeg">
+</audio>
+<header>
+<style>
+#k{
+background: rgba(98,125,77,1);
+background: -moz-linear-gradient(left, rgba(98,125,77,1) 0%, rgba(85,116,129,0.89) 46%, rgba(70,105,191,0.84) 100%);
+background: -webkit-gradient(left top, right top, color-stop(0%, rgba(98,125,77,1)), color-stop(46%, rgba(85,116,129,0.89)), color-stop(100%, rgba(70,105,191,0.84)));
+background: -webkit-linear-gradient(left, rgba(98,125,77,1) 0%, rgba(85,116,129,0.89) 46%, rgba(70,105,191,0.84) 100%);
+background: -o-linear-gradient(left, rgba(98,125,77,1) 0%, rgba(85,116,129,0.89) 46%, rgba(70,105,191,0.84) 100%);
+background: -ms-linear-gradient(left, rgba(98,125,77,1) 0%, rgba(85,116,129,0.89) 46%, rgba(70,105,191,0.84) 100%);
+background: linear-gradient(to right, rgba(98,125,77,1) 0%, rgba(85,116,129,0.89) 46%, rgba(70,105,191,0.84) 100%);
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#627d4d', endColorstr='#4669bf', GradientType=1 );
+}
+#s{
+background: rgba(243,226,199,1);
+background: -moz-linear-gradient(left, rgba(243,226,199,1) 0%, rgba(163,106,26,1) 50%, rgba(182,141,76,1) 51%, rgba(196,159,151,1) 75%, rgba(210,177,230,1) 100%);
+background: -webkit-gradient(left top, right top, color-stop(0%, rgba(243,226,199,1)), color-stop(50%, rgba(163,106,26,1)), color-stop(51%, rgba(182,141,76,1)), color-stop(75%, rgba(196,159,151,1)), color-stop(100%, rgba(210,177,230,1)));
+background: -webkit-linear-gradient(left, rgba(243,226,199,1) 0%, rgba(163,106,26,1) 50%, rgba(182,141,76,1) 51%, rgba(196,159,151,1) 75%, rgba(210,177,230,1) 100%);
+background: -o-linear-gradient(left, rgba(243,226,199,1) 0%, rgba(163,106,26,1) 50%, rgba(182,141,76,1) 51%, rgba(196,159,151,1) 75%, rgba(210,177,230,1) 100%);
+background: -ms-linear-gradient(left, rgba(243,226,199,1) 0%, rgba(163,106,26,1) 50%, rgba(182,141,76,1) 51%, rgba(196,159,151,1) 75%, rgba(210,177,230,1) 100%);
+background: linear-gradient(to right, rgba(243,226,199,1) 0%, rgba(163,106,26,1) 50%, rgba(182,141,76,1) 51%, rgba(196,159,151,1) 75%, rgba(210,177,230,1) 100%);
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f3e2c7', endColorstr='#d2b1e6', GradientType=1 );
+
+
+}
+input{width:90px;
+height:50px;
+margin:10px;
+font-size:35px;
+border-style:none;
+background-color:black;
+color:white;
+cursor:pointer;}
+</style>
+
+<div class="main-content-header" style="text-align:center">
+<h1>SIMPLE <span> CALCULATOR BY JAVASCRIPT</span>.<br>
+
+</h1>
+</div>
+</header>
+<script>
+function audios(){
+var x = document.getElementById("myAudio"); 
+ x.play(); 
+}
+function audio(){
+var x = document.getElementById("myAudio2"); 
+ x.play(); 
+}
+function math()
+{
+var x = document.getElementById("myAudio2"); 
+ x.play(); 
+var Num1=document.getElementById("s").value;
+var result = Math.sqrt(Num1);
+document.getElementById("s").value = result;
+}
+function back() {
+    var value = document.getElementById("s").value;
+    document.getElementById("s").value = value.substr(0, value.length - 1);
+}
+
+
+</script>
+<div class="row" style="text-align:center"> 
+<form name="cal">
+
+<input  id="s"name="show"style="width:450px;height:50px;background-color:#acba98;text-align:center;"><br>
+
+<input type="button" name="name" value='1' onclick="cal.show.value+='1',audios()">
+<input type="button" name="name" value='2' onclick="cal.show.value+='2',audios()">
+<input type="button" name="name" value='3' onclick="cal.show.value+='3',audios()">
+<input type="button" name="name" style="background-color:#60ff95" value='+' onclick="cal.show.value+='+',audios()"><br>
+<input type="button" name="name" value='4' onclick="cal.show.value+='4',audios()">
+<input type="button" name="name" value='5'onclick="cal.show.value+='5',audios()">
+<input type="button" name="name" value='6' onclick="cal.show.value+='6',audios()">
+<input type="button" name="name" style="background-color:#3f1b28" value='*' onclick="cal.show.value+='*',audios()"><br>
+<input type="button" name="name" value='7' onclick="cal.show.value+='7',audios()">
+<input type="button" name="name" value='8'onclick="cal.show.value+='8',audios()">
+<input type="button" name="name"  value='9' onclick="cal.show.value+='9',audios()">
+<input type="button" name="name" style="background-color:#414851" value='-' onclick="cal.show.value+='-',audios()"><br>
+<input type="button" name="name"  value='.' onclick="cal.show.value+='.',audios()">
+<input type="button" name="name" value='0' onclick="cal.show.value+='0',audios()">
+<input type="button" name="name" style="background-color:red"  value='c' onclick="cal.show.value='',audio()">
+<input type="button" name="name"style="background-color:#3f1b28" value='/' onclick="cal.show.value+='/',audios()"><br>
+<input type="button" name="name"style="background-color:#ef75df" value='%' onclick="cal.show.value+='%',audios()">
+<input type="button" id="i" style="background-color:#4e7c61"   value="<" onclick='back(),audio()'>
+<input type="button" name="name"style="background-color:#a260ff" value='&radic;' onclick='math()'>
+<input type="button" name="name"style="background-color:#24d6d3" value='=' onclick="cal.show.value=eval(cal.show.value),audio()">
+
+
+
+
+</form>
+</div>
+
+<!--<section class="section-feature">
+<div class="row "> 
+<h2>ABOUT US BISWAJIT &mdash; SEARCH MORE THINGS
+</h2>
+<p class="long-copy"> 
+Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+ Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, 
+ when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries
+</p>
+</div>
+<div class="row "> 
+<div class="col-3 dis">
+<i class="ion-heart icon"></i>
+<h3>about pg </h3>
+
+<p> 
+Contrary to popular belief, Lorem Ipsum is not simply random text.
+ It has roots in a piece of classical Latin literature from 45 BC,
+ making it over 2000 years old. Richard McClintock, a Latin professor at Hampden-Sydney
+</p>
+</div>
+<div class="col-3 dis">
+<i class="ion-aperture icon"></i>
+<h3>about +3 bsc</h3>
+<p> 
+ Richard McClintock, a Latin professor at Hampden-SydneyThe 
+ standard chunk of Lorem Ipsum used since the 1500s
+ is reproduced below for those interested. 
+ Sections 1.10.32 and 1.10.33 from "de Finibus Bonorum et Malorum" by Cicero.
+</p>
+</div>
+<div class="col-3 dis">
+<i class="ion-ribbon-b icon"></i>
+<h3>about chse</h3>
+<p> 
+Contrary to popular belief, Lorem Ipsum is not simply random text.
+ It has roots in a piece of classical
+ Latin literature from 45 BC, making it over 2000 years old. 
+ Richard McClintock, a Latin professor at Hampden-Sydney
+</p>
+</div>
+<div class="col-3 dis">
+<i class="ion-bonfire icon"></i>
+<h3>about hsc</h3>
+<p> 
+Lorem Ipsum is not simply random text. It has roots in a piece of classical
+ Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at Hampden-Sydney
+</p>
+</div>
+</div>
+</section>
+<section class="feature images">
+<div class="row"> 
+<h2>skill section</h2>
+<div class="col-3 image show">
+<figure class="meal-photo image">
+ <img src="image/html.jpg" alt="The Pulpit Rock" width="250" height="200">
+</figure>
+</div>
+<div class="col-3 image show">
+<figure class="meal-photo image">
+ <img src="image/css.png" alt="The it Rock" width="250" height="200">
+</figure>
+</div>
+<div class="col-3 image show">
+<figure class="meal-photo image">
+ <img src="image/js.png" alt="The Pulp Rock" width="250" height="200">
+</figure>
+</div>
+<div class="col-3 image show">
+<figure class="meal-photo image">
+ <img src="image/php.jpg" alt="lpit Rock" width="250" height="200">
+</figure>
+</div>
+<div class="col-3 image show">
+<figure class="meal-photo image">
+ <img src="image/bootstrap.png" alt="lpit Rock" width="250" height="200">
+</figure>
+</div>
+<div class="col-3 image show">
+<figure class="meal-photo image">
+ <img src="image/wordpress2.jpg" alt="lpit Rock" width="250" height="200">
+ 
+</figure>
+</div>
+<div class="col-3 image show">
+<figure class="meal-photo image">
+ <img src="image/ajax.png" alt="lpit Rock" width="250" height="200">
+</figure>
+</div>
+<div class="col-3 image show">
+<figure class="meal-photo image">
+ <img src="image/mysql.jpg" alt="lpit Rock" width="250" id="image" height="200">
+</figure>
+</div>
+</div>
+
+</section>-->
+</body>
+<!--<footer class="footer" >
+<div class="row "> 
+<form action="/action_page.php">
+<div class="col-4 ">
+First name:<input type="text" name="name" placeholder="enter name" autofocus>
+</div><div class="col-4">
+Middle name:<input type="text" name="name" placeholder="enter middle ">
+</div><div class="col-4">
+
+Last name:<input type="text" name="name" placeholder="enter name">
+</div>
+<div class="col-8">
+<lable>
+Address:<textarea rows="8" cols="100" placeholder="enter name"></textarea>
+</div>
+<div class="col-12">
+<button type="button" name="submit">Register</button>
+</div>
+</form>
+</div>
+</footer>-->
+</head>
+</html>
